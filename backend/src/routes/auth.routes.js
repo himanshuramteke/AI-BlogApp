@@ -4,6 +4,7 @@ import {
   logoutController,
   signupController,
 } from "../controllers/auth.controller.js";
+import { adminLoginController } from "../controllers/admin.controller.js";
 
 const router = express.Router();
 
