@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <div className="text-2xl">
       <Link to="/" className="link link-primary">
@@ -9,9 +9,22 @@ export default function LoginPage() {
       <div className="min-h-screen flex items-center justify-center bg-base-200">
         <div className="card w-full max-w-md shadow-2xl bg-base-100">
           <div className="card-body">
-            <h2 className="text-3xl font-bold text-center mb-6">Login</h2>
+            <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
             <form>
-              {/* Email Field */}
+              {/* Full Name */}
+              <div className="form-control mb-4">
+                <label className="label">
+                  <span className="label-text">Full Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  className="input input-bordered w-full"
+                  required
+                />
+              </div>
+
+              {/* Email */}
               <div className="form-control mb-4">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -24,7 +37,7 @@ export default function LoginPage() {
                 />
               </div>
 
-              {/* Password Field */}
+              {/* Password */}
               <div className="form-control mb-6">
                 <label className="label">
                   <span className="label-text">Password</span>
@@ -35,27 +48,22 @@ export default function LoginPage() {
                   className="input input-bordered w-full"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
 
               {/* Submit Button */}
               <div className="form-control">
-                <button className="btn btn-primary w-full">Login</button>
+                <button className="btn btn-primary w-full">Sign Up</button>
               </div>
             </form>
 
             {/* Divider */}
             <div className="divider">OR</div>
 
-            {/* Sign up link */}
+            {/* Login link */}
             <p className="text-center text-sm">
-              Don’t have an account?{" "}
-              <Link to="/signup" className="link link-primary">
-                Sign up
+              Already have an account?{" "}
+              <Link to="/login" className="link link-primary">
+                Login
               </Link>
             </p>
           </div>
